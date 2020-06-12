@@ -1,0 +1,67 @@
+/* color palette
+plum: #340328
+olive: #54592d
+rust: #b94515
+gold: #e39806
+*/
+
+:root {
+    --plum: #340328;
+    --olive: #54592d;
+    --rust: #b94515;
+    --gold: #e39806;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.headers {
+    font-family: 'Moon Get!';
+    color: var(--olive);
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--plum);
+}
+
+a:hover {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.team-member img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* nav */
+.nav-section {
+    width: 100%;
+    border-top: 10px solid var(--rust);
+    border-bottom: 2px solid var(--rust);
+}
+
+#logo {
+    padding: 5px 0;
+}
+
+.navlist {
+    text-align: right;
+}
+
+.navlist li {
+    display: inline;
+    margin-right: 10px; 
+    /* text-align: right; */
+
+}
+
