@@ -17,19 +17,44 @@ gold: #e39806
     scroll-behavior: smooth;
 }
 
+/* generic rules */
+
+body {
+    background: radial-gradient(
+        circle,
+        #ffffff,
+        #f0d49e
+    )
+}
+
 .headers {
     font-family: 'Moon Get!';
     color: var(--olive);
+    text-transform: capitalize;
     text-align: center;
+    text-shadow: 1px 1px 1px var(--plum);
 }
+
+h1 {
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+h2 {
+    font-size: calc(14px + (24 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+h3 {
+    font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
 
 a {
     text-decoration: none;
-    color: var(--plum);
+    color: var(--rust);
 }
 
 a:hover {
-    color: var(--gold);
+    color: var(--plum);
     text-decoration: none;
 }
 
@@ -38,30 +63,134 @@ ul {
     padding-left: 0;
 }
 
+p {
+    font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+/* header */
+/* nav */
+
+#nav {
+    margin-bottom: 5em;
+    width: 100%;
+    border-top: 10px solid var(--rust);
+    border-bottom: 5px solid var(--rust);
+}
+
+#navbar {
+    padding: 1em;
+    text-align: center;
+}
+
+#navbar li {
+    margin-right: 10em;
+    padding: 0 1em;
+    display: inline;
+    text-transform: uppercase;
+    font-size: calc(10px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+
+
+.banner { 
+    margin: 5em 0;
+    width: 100%;
+    height: auto;
+} 
+
+#banner-logo {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+}
+
+/* main */
+
+.content {
+    width: 60%;
+    height: auto;
+    padding: 1em;
+    /* border: 1px solid black; */
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px var(--plum);
+}
+
+#mission {
+    margin: 2em 0;
+    width: 50%;
+}
+
+#goal {
+    margin: 2em 0; 
+    width: 50%;
+    text-align: right;
+    float: right;
+}
+
+#program1 {
+    margin: 5em 0;
+}
+
+#program2 {
+    margin: 10em 0;
+    text-align: right;
+    float: right; 
+}
+
+#program4 {
+    margin: 10em 0;
+    text-align: right;
+    float: right; 
+}
+
+#team-header {
+    margin: 2em 0;
+}
+
+.team-member {
+    margin: 2em 0;
+    padding: 1em;
+}
+
+.team-member h3 {
+    margin-bottom: 1em;
+}
+
+.team-member figure {
+    text-align: center;
+}
+
 .team-member img {
     display: block;
     margin: 0 auto;
+    border: 1px solid var(--plum);
+    border-radius: 50%;
+     box-shadow: 2px 2px 2px var(--plum);
+} 
+
+.team-member figcaption {
+    font-style: italic;
 }
 
-/* nav */
-.nav-section {
+.team-member .text {
+    margin-top: 1em;
+    font-size: calc(10px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));
+    text-align: center; 
+}
+
+footer {
+    margin: 5em 0;
+    padding: 1em;
     width: 100%;
-    border-top: 10px solid var(--rust);
-    border-bottom: 2px solid var(--rust);
+    border-top: 5px solid var(--rust);
 }
 
-#logo {
-    padding: 5px 0;
+.top {
+    text-align: center;
+    font-size: calc(10px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
 
-.navlist {
-    text-align: right;
+#colophon {
+    text-align: center;
+    font-size: calc(10px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
-
-.navlist li {
-    display: inline;
-    margin-right: 10px; 
-    /* text-align: right; */
-
-}
-
