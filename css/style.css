@@ -20,6 +20,7 @@ gold: #e39806
 /* generic rules */
 
 body {
+    margin: 0;
     background: radial-gradient(
         circle,
         #ffffff,
@@ -36,11 +37,11 @@ body {
 }
 
 h1 {
-    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(14px + (36 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 h2 {
-    font-size: calc(14px + (24 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(14px + (32 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 h3 {
@@ -51,11 +52,12 @@ h3 {
 a {
     text-decoration: none;
     color: var(--rust);
+    transition: color 0.3s ease /*transition color when hovering */
 }
 
 a:hover {
     color: var(--plum);
-    text-decoration: none;
+    text-decoration: none;  
 }
 
 ul {
@@ -64,7 +66,8 @@ ul {
 }
 
 p {
-    font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: calc(10px + (22 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
 
 /* header */
@@ -77,15 +80,17 @@ p {
     border-bottom: 5px solid var(--rust);
 }
 
+
 #navbar {
+    margin-bottom: 0;
     padding: 1em;
-    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    /* text-align: right; */
 }
 
 #navbar li {
-    margin-right: 10em;
-    padding: 0 1em;
-    display: inline;
     text-transform: uppercase;
     font-size: calc(10px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
@@ -111,7 +116,7 @@ p {
     height: auto;
     padding: 1em;
     /* border: 1px solid black; */
-    border-radius: 10%;
+    border-radius: 5px;
     box-shadow: 5px 5px 5px var(--plum);
 }
 
@@ -121,10 +126,14 @@ p {
 }
 
 #goal {
-    margin: 2em 0; 
-    width: 50%;
+    margin: 2em 2em; 
+    width: 40%;
     text-align: right;
     float: right;
+}
+
+.program-container {
+    margin-top: 60px ;
 }
 
 #program1 {
@@ -132,13 +141,13 @@ p {
 }
 
 #program2 {
-    margin: 10em 0;
+    margin: 10em 2em;
     text-align: right;
     float: right; 
 }
 
 #program4 {
-    margin: 10em 0;
+    margin: 10em 2em;
     text-align: right;
     float: right; 
 }
@@ -169,13 +178,14 @@ p {
 } 
 
 .team-member figcaption {
+    padding-top: 8px;
     font-style: italic;
 }
 
 .team-member .text {
     margin-top: 1em;
     font-size: calc(10px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));
-    text-align: center; 
+    text-align: justify; 
 }
 
 footer {
@@ -184,6 +194,38 @@ footer {
     width: 100%;
     border-top: 5px solid var(--rust);
 }
+
+#social-text {
+    text-align: right;
+}
+
+@media (max-width: 767px) {
+    #social-text {
+        text-align: center;
+    }
+
+    #address {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+#social-text a {
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink{
+    50% {
+        color: var(--rust);
+    }
+
+    100% {
+        color: var(--gold);
+    }
+}
+
 
 .top {
     text-align: center;
